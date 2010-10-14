@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Thesis_Security_App_1._1
 {
-    class Grid
+    class Grid //Test
     {
         private int x;
         private int y;
