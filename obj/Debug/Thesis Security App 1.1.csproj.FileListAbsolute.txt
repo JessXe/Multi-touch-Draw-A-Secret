@@ -10,3 +10,5 @@ C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thes
 C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.application
 C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.exe
 C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.pdb
+C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.exe
+C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.pdb
