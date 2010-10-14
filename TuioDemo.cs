@@ -226,11 +226,13 @@ namespace Thesis_Security_App_1._1
         public void updateTuioCursor(TuioCursor c)
         {
             if (verbose) Console.WriteLine("set cur " + c.getCursorID() + " (" + c.getSessionID() + ") " + c.getX() + " " + c.getY() + " " + c.getMotionSpeed() + " " + c.getMotionAccel());
-            IEnumerable pbEnum = mainGrid.getPBArray() as IEnumerable;
+            mainGrid.checkCursor((c.getX() * TuioDemo.width), (c.getY() * TuioDemo.height));
+            
+/*            IEnumerable pbEnum = mainGrid.getPBArray() as IEnumerable;
             if (pbEnum != null)
             {
-                int cursorX = (int)(c.getX() * TuioDemo.width);
-                int cursorY = (int)(c.getY() * TuioDemo.height);
+                float cursorX = (int)(c.getX() * TuioDemo.width);
+                float cursorY = (int)(c.getY() * TuioDemo.height);
                 foreach (MyPictureBox pb in pbEnum)
                 {
                     if ((cursorX <= (pb.Location.X + pb.Width) && cursorX >= (pb.Location.X)) && (cursorY <= (pb.Location.Y + pb.Height) && cursorY >= (pb.Location.Y)) && lastnode != pb.nodenum)
@@ -244,7 +246,9 @@ namespace Thesis_Security_App_1._1
                         }
                     }
                 }
+ 
             }
+ */ 
         }
 
         public void updateImage(MyPictureBox pb)

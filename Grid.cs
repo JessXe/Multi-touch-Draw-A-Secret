@@ -9,6 +9,10 @@ namespace Thesis_Security_App_1._1
     {
         private int x;
         private int y;
+        private static int x_mult = 100;
+        private static int y_mult = 100;
+        private static int x_off = -50;
+        private static int y_off = -50;
         private int form_width;
         private int form_height;
         MyPictureBox[,] node;
@@ -20,10 +24,10 @@ namespace Thesis_Security_App_1._1
         public Grid(int x, int y, TuioDemo f)
         {    
             node = new MyPictureBox[x, y];
-            drawGrid(-50, -50, f);
+            drawGrid(f);
         }
 
-        public bool drawGrid(int x_off, int y_off, TuioDemo f)
+        public bool drawGrid(TuioDemo f)
         {
             for (x = 0; x < node.GetLength(0); x++) //x is the column indicator
             {
@@ -32,7 +36,7 @@ namespace Thesis_Security_App_1._1
                     node[x, y] = new MyPictureBox(); //So, node[2][0] is the first row, 3rd element
                     ((System.ComponentModel.ISupportInitialize)(node[x, y])).BeginInit();
                     node[x, y].Image = global::Thesis_Security_App_1._1.Properties.Resources.Untouched;
-                    node[x, y].Location = new System.Drawing.Point(((x + 1) * 100) + x_off, ((y + 1) * 100) + y_off);
+                    node[x, y].Location = new System.Drawing.Point(((x + 1) * x_mult) + x_off, ((y + 1) * y_mult) + y_off);
                     node[x, y].Name = "node:{" + x + "," + y + "}";
                     node[x, y].Size = new System.Drawing.Size(50, 50);
                     node[x, y].TabIndex = (node.GetLength(1) * y) + x + 4; //The algorithm we are using is (RowNumber*MaxNumColumns)+currentColumn( + offset so that the buttons are first)
@@ -51,6 +55,13 @@ namespace Thesis_Security_App_1._1
             f.setButtonloc(2, 105, edge.Y + 75);
             f.setButtonloc(3, 199, edge.Y + 75);
             f.setTextBoxLoc(289, edge.Y + 75);
+            return true;
+        }
+
+        public bool checkCursor(float cursorX, float cursorY)
+        {
+            float x_val = (cursorX / x_mult) - x_off;
+            float y_val = (cursorY / y_mult) - y_off;
             return true;
         }
 
