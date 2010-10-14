@@ -62,8 +62,8 @@ namespace Thesis_Security_App_1._1
             this.textBox1 = new System.Windows.Forms.TextBox();
             InitializeQueueArray(code);
             InitializeQueueArray(prev_code);
-            int x = 10;
-            int y = 7;
+            int x = 5;
+            int y = 5;
             lastnode = 999;
             mainGrid = new Grid(x, y, this);
 
@@ -226,7 +226,7 @@ namespace Thesis_Security_App_1._1
         public void updateTuioCursor(TuioCursor c)
         {
             if (verbose) Console.WriteLine("set cur " + c.getCursorID() + " (" + c.getSessionID() + ") " + c.getX() + " " + c.getY() + " " + c.getMotionSpeed() + " " + c.getMotionAccel());
-            mainGrid.checkCursor((c.getX() * TuioDemo.width), (c.getY() * TuioDemo.height));
+            mainGrid.checkCursor((c.getX() * TuioDemo.width), (c.getY() * TuioDemo.height), c.getCursorID(), code);
             
 /*            IEnumerable pbEnum = mainGrid.getPBArray() as IEnumerable;
             if (pbEnum != null)
@@ -249,28 +249,6 @@ namespace Thesis_Security_App_1._1
  
             }
  */ 
-        }
-
-        public void updateImage(MyPictureBox pb)
-        {
-            switch(pb.passes)
-            {
-                case 0:
-                    pb.Image = global::Thesis_Security_App_1._1.Properties.Resources.Untouched;
-                    break;
-                case 1:
-                    pb.Image = global::Thesis_Security_App_1._1.Properties.Resources.Touched1;
-                    break;
-                case 2:
-                    pb.Image = global::Thesis_Security_App_1._1.Properties.Resources.Touched2;
-                    break;
-                case 3:
-                    pb.Image = global::Thesis_Security_App_1._1.Properties.Resources.Touched3;
-                    break;
-                default:
-                    pb.Image = global::Thesis_Security_App_1._1.Properties.Resources.Bad;
-                    break;
-            }
         }
 
         public void SortCode() //Consider upgrading to level 2 or level 3, also currently won't deal with two patterns starting at the same node.
