@@ -61,7 +61,7 @@ namespace Thesis_Security_App_1._1
             return true;
         }
 
-        public Queue<int>[] checkCursor(float cursorX, float cursorY, int cursorID, Queue<int>[] code)
+        public void checkCursor(float cursorX, float cursorY, int cursorID, Queue<int>[] code)
         {
             float x_val = (cursorX -(float)x_off) / (float)x_mult;
             float y_val = (cursorY -(float)y_off) / (float)y_mult;
@@ -72,14 +72,9 @@ namespace Thesis_Security_App_1._1
             float x_dec = x_val - x_id;
             float y_dec = y_val - y_id;
             MyPictureBox cur_node;
-            Debug.WriteLine("x_mult, y_mult, wid_max, hth_max \t" + x_mult +", " + y_mult + ", " + wid_max + ", " + hth_max);
-            Debug.Write("x, y - curs = \t" + cursorX + ", " + cursorY + "\n");
-            Debug.Write("x, y - val = \t" + x_val + ", " + y_val + "\n");
-            Debug.Write("[x, y - id], [x, y - dec] = \t[" + x_id + ", " + y_id + "], [" + x_dec + ", " + y_dec + "]\n");
             if (x_dec <= wid_max)
                 if (y_dec <= hth_max)
                 {
-                    Debug.WriteLine("Hey, well we're hereeeeee");
                     cur_node = node[x_id - 1, y_id -1];
                     cur_node.passes++;
                         if (cur_node.passes < 2)
@@ -89,9 +84,6 @@ namespace Thesis_Security_App_1._1
 //                            lastnode = cur_node.nodenum;
                         }
                 }
-
-
-            return code;
         }
 
         public void updateImage(MyPictureBox pb)
