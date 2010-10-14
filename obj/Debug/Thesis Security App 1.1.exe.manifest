@@ -64,14 +64,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Thesis Security App 1.1.exe" size="27136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Thesis Security App 1.1.exe" size="26624">
       <assemblyIdentity name="Thesis Security App 1.1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jsabggBFzI/Xua+t1rHAK+3S724=</dsig:DigestValue>
+        <dsig:DigestValue>cRuRyYHKn7/fCYuhYIrILRMZR9w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,18 +1,12 @@
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis_Security_App_1._1.Properties.Resources.resources
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis_Security_App_1._1.TuioDemo.resources
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.csproj.GenerateResource.Cache
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\bin\Debug\Thesis Security App 1.1.exe.manifest
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\bin\Debug\Thesis Security App 1.1.application
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\bin\Debug\Thesis Security App 1.1.exe
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\bin\Debug\Thesis Security App 1.1.pdb
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.exe.manifest
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.application
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.exe
-C:\Documents and Settings\JousterL\My Documents\Visual Studio 2008\Projects\Thesis Security App 2.0\obj\Debug\Thesis Security App 1.1.pdb
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\Thesis Security App 1.1.exe
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\Thesis Security App 1.1.pdb
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\Thesis_Security_App_1._1.Properties.Resources.resources
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\Thesis_Security_App_1._1.TuioDemo.resources
-C:\Documents and Settings\JessXe\My Documents\Visual Studio 2008\Projects\Multi-touch Draw-A-Secret\obj\Debug\Thesis Security App 1.1.csproj.GenerateResource.Cache
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.exe
+C:\projects\Multi-touch-Draw-A-Secret\bin\Debug\Thesis Security App 1.1.exe.manifest
+C:\projects\Multi-touch-Draw-A-Secret\bin\Debug\Thesis Security App 1.1.application
+C:\projects\Multi-touch-Draw-A-Secret\bin\Debug\Thesis Security App 1.1.exe
+C:\projects\Multi-touch-Draw-A-Secret\bin\Debug\Thesis Security App 1.1.pdb
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis_Security_App_1._1.Properties.Resources.resources
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis_Security_App_1._1.TuioDemo.resources
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.csproj.GenerateResource.Cache
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.exe.manifest
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.application
+C:\projects\Multi-touch-Draw-A-Secret\obj\Debug\Thesis Security App 1.1.pdb
