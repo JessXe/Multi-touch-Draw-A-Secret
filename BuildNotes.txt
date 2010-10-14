@@ -1,0 +1,86 @@
+Session 1 - Narrowing the Scope of the Problem
+Thesis Security App V 1.1 - I'm going to come up with a more fun name, since I'll be putting a lot of time into this :)
+-------------------------------------------------------------------------------------
+
+
+	The first thing I want to do is set up a loop that will 
+generate the images in a grid, at first this is all
+I want to worry about, later I'l enhance the function
+to distribute functional code to each node/image/button.
+
+First I stripped out the gui from the old project, 
+removing most functionality from buttons and images.
+
+Take a look at V 1.1 Form1.Designer.cs, this is all I am really 
+looking at right now.  I want to look and see everything that is
+generated for each node, location, name, initialization, etc.  
+
+
+Session 2 - Planning for Generalization
+Thesis Security App V 1.1
+------------------------------------------------------------------------------
+
+
+	Now once I get an idea of what is nessecary to control each
+aspect of this form I begin to consider how each parameter
+could be automatically generated given only the desired 
+number of rows and columns.  For one node the following must 
+be generated (line numbers from Form1.Designer.cs included for ref):
+
+31|	this.p1 = new System.Windows.Forms.PictureBox();
+
+41|	((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
+
+48| // 
+49| // p1
+50|	// 
+51|	this.p1.Image = global::Thesis_Security_App_1._1.Properties.Resources.Untouched;
+52|	this.p1.Location = new System.Drawing.Point(13, 13);
+53|	this.p1.Name = "p1";
+54|	this.p1.Size = new System.Drawing.Size(66, 70);
+55|	this.p1.TabIndex = 0;
+56|	this.p1.TabStop = false;
+
+Initialization tends to be the trickiest part of doing this because
+while I'd love to just replace p1 with p[x] or something and  
+throw it into a loop, I'm pretty sure the compiler isn't going
+to just let me throw variables into my variable names! (Keep in mind
+that I've never even looked at C# code before this project, so I'm
+pretty much just guessing my way through this.  Good thing I'm good
+at guessing.)  So instead I'll make a 1-D or 2-D array of PictureBoxes
+and add it to the current Form class (Might have to build a new class 
+to do this, depending on C#'s flexibility.) using the given number of 
+rows and columns to create the array and then loop through and initialize. 
+
+I'll call my array "node", so now instead of having indivdual names like
+"p1", "p2", etc. each node will be referenced by it's location in the
+grid, hence "node[1][2]" will be the node in the 2nd column, 3rd row.
+
+Row #31 will become something like:
+this.node[x][y] = new System.Windows.Forms.PictureBox();
+
+and #41:
+((System.ComponentModel.ISupportInitialize)(node[x][y])).BeginInit();
+
+For line #s 51, 54 & 56 the data is static lke #31 & #41 so they will
+reflect similar changes
+
+#s 52, 53 & 55 however are a different story.
+#52 is the location, I'll deal with this last, as it is the most complicated.
+
+#53 is the name, not too tough.  Assuming C# has string manipulation
+similar to java this'll probably work fine (I'll experiment with spaces
+and symbols later to possibly create a prettier looking name):
+this.node[x][y].Name = "node"+x+""+y;
+
+#55 tab index, seems to simply increment with each new node . . . 
+
+Now, the location.  Still not too much of a problem.  I just need to 
+look at the width and height of each image, and figure out the 
+sspacing that I want to have between each of the images.
+Then I use this information to create width and height multipliers,
+which I just multiply by the node's X-value+1 and Y-value+1 respectivly
+to get the location X and Y values for the node!
+
+Now I just have to go and code it and see how well my plan works,
+making adaptions where it is rquired.
