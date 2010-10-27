@@ -49,7 +49,6 @@ namespace Thesis_Security_App_1._1
         Pen fingerPen = new Pen(new SolidBrush(Color.Blue), 1);
 
         Grid mainGrid;
-        int lastnode; //The last node to be touched, prevents constant evaluation while the mouse is hovering.
         Queue<int>[] code = new Queue<int>[10];
         Queue<int>[] prev_code = new Queue<int>[10];
 
@@ -226,33 +225,11 @@ namespace Thesis_Security_App_1._1
         public void updateTuioCursor(TuioCursor c)
         {
             if (verbose) Console.WriteLine("set cur " + c.getCursorID() + " (" + c.getSessionID() + ") " + c.getX() + " " + c.getY() + " " + c.getMotionSpeed() + " " + c.getMotionAccel());
-            mainGrid.checkCursor((c.getX() * TuioDemo.width), (c.getY() * TuioDemo.height), c.getCursorID(), code);
-            
-/*            IEnumerable pbEnum = mainGrid.getPBArray() as IEnumerable;
-            if (pbEnum != null)
-            {
-                float cursorX = (int)(c.getX() * TuioDemo.width);
-                float cursorY = (int)(c.getY() * TuioDemo.height);
-                foreach (MyPictureBox pb in pbEnum)
-                {
-                    if ((cursorX <= (pb.Location.X + pb.Width) && cursorX >= (pb.Location.X)) && (cursorY <= (pb.Location.Y + pb.Height) && cursorY >= (pb.Location.Y)) && lastnode != pb.nodenum)
-                    {
-                        pb.passes++;
-                        if (pb.passes < 2)
-                        {
-                            code[c.getCursorID()].Enqueue(pb.nodenum);
-                            updateImage(pb);
-                            lastnode = pb.nodenum;
-                        }
-                    }
-                }
- 
-            }
- */ 
+            mainGrid.checkCursor((c.getX() * TuioDemo.width), (c.getY() * TuioDemo.height), c.getCursorID(), code);            
         }
 
         public void SortCode() //Consider upgrading to level 2 or level 3, also currently won't deal with two patterns starting at the same node.
-    {
+        {
         int cur = 0;
         int nxt = 0;
         bool flg = true;
@@ -274,7 +251,7 @@ namespace Thesis_Security_App_1._1
                 }
             }
         }
-    }
+        }
 
         public void WriteOutCode(string filepath)
         {

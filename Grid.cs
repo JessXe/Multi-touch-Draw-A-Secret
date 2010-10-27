@@ -77,7 +77,7 @@ namespace Thesis_Security_App_1._1
                 {
                     cur_node = node[x_id - 1, y_id -1];
                     cur_node.passes++;
-                        if (cur_node.passes < 2)
+                        if (cur_node.passes < 4)
                         {
                             code[cursorID].Enqueue(cur_node.nodenum);
                             updateImage(cur_node);
